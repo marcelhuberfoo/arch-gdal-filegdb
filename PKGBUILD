@@ -42,7 +42,7 @@ prepare() {
 }
 build() {
   cd ${srcdir}/$_pkgname-$pkgver
-
+  export CPPFLAGS=-Dlinux
   ./configure --prefix=/usr --with-netcdf --with-libtiff --with-sqlite3 \
               --with-geotiff --with-mysql --with-python=/usr/bin/python2 \
               --without-libtool --with-curl --with-hdf5 --with-perl --with-geos \
